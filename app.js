@@ -19,7 +19,6 @@ var contribute2 = require('./routes/contribute2');
 var analyze = require('./routes/analyze');
 var myprojects = require('./routes/myprojects');
 var timeData = require('./routes/timeData');
-var contribute3 = require('./routes/contribute3');
 // Example route
 // var user = require('./routes/user');
 
