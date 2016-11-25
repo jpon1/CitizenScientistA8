@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link href="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.css" rel="stylesheet">
+  <link href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page" data-control-title="index" id="page3">
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <header onclick="window.location.href='/index'" class="ui-title">
+            CITIZEN SCIENTIST
+        </header>
+        <a onclick="window.location.href='/index'" data-transition="fade" data-icon="home">
+            Home
+        </a>
+    </div>
+
+    <div role="main" class="ui-content">
+    
+    <h3 data-mce-style="text-align: center;" style="text-align: center;">
+        <span style="font-family: 'Times New Roman'; color: rgb(136, 136, 136); background-color: rgb(252, 255, 252);">
+            <b>
+                FEATURES
+            </b>
+        </span>
+    </h3>
+
+        <div class="container">
+            <br>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                        <img src="/images/slide1.png" alt="Chania" width="100%" height="100%">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="/images/slide2.png" alt="Chania" width="100%" height="100%">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="/images/slide3.png" alt="Flower" width="100%" height="100%">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="/images/slide4.png" alt="Flower" width="100%" height="100%">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div data-controltype="textblock">
+            <p style="text-align: center;">
+                <span>
+                    <strong>
+                        <span>
+                            Welcome Citizen Scientist!&nbsp;
+                        </span>
+                    </strong>
+                </span>
+                <br>
+            </p>
+        </div>
+        <div data-controltype="textblock">
+            <p style="text-align: center;">
+                <span>
+                    Do you like making differences?&nbsp;
+                </span>
+                <br>
+                <span>
+                    Become a scientist
+                    <br>
+                    Connect with others with similar interests,
+                    <br>
+                    and tackle questions that will
+                    revolutionize our human understanding!
+                    <br>
+                </span>
+            </p>
+        </div>
+        <div data-role="navbar" data-iconpos="top">
+       
+                    <a onclick="window.location.href='/signin'" data-transition="fade" data-theme="" data-icon="">
+                        SIGN IN
+                    </a>
+
+        </div>
+        <div data-role="navbar">
+            <a onclick="window.location.href='/signup'" data-transition="fade" data-theme="" data-icon="">
+                SIGN UP
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+var  count1 = 0;
+var  count2 = 0;
+var  count3 = 0;
+var  count4 = 0;
+
+$('#createP').hide();
+$('#contributeP').hide();
+$('#analyzeP').hide();
+$('#monitorP').hide();
+
+
+function showCreate() {
+
+    count1 = count1 + 1;
+    if ((count1 % 2) == 0) {
+      return $('#createP').hide();
+    }
+
+    $('#createP').show();
+    $('#contributeP').hide();
+    $('#analyzeP').hide();
+    $('#monitorP').hide();
+};
+
+function showContribute() {
+
+    count2 = count2 + 1;
+    if ((count2 % 2) == 0) {
+      count1 = 0;
+      return $('#contributeP').hide();
+    }
+    $('#createP').hide();
+    $('#contributeP').show();
+    $('#analyzeP').hide();
+    $('#monitorP').hide();
+    //count1 = 0;
+};
+function showAnalyze() {
+
+    count3 = count3 + 1;
+    if ((count3 % 2) == 0) {
+      count2 = 0;
+      return $('#analyzeP').hide();
+    }
+    $('#createP').hide();
+    $('#contributeP').hide();
+    $('#analyzeP').show();
+    $('#monitorP').hide();
+    //count2 = 0;
+};
+function showMonitor() {
+
+    count4 = count4 + 1;
+     
+    if ((count4 % 2) == 0) {
+      return $('#monitorP').hide();
+    }
+    $('#createP').hide();
+    $('#contributeP').hide();
+    $('#analyzeP').hide();
+    $('#monitorP').show();
+    //count4 = 0;
+};
+
+</script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+
+
+</body>
+</html>
