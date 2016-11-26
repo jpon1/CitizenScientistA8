@@ -21,6 +21,9 @@ var myprojects = require('./routes/myprojects');
 var timeData = require('./routes/timeData');
 var social= require('./routes/social');
 var campaign= require('./routes/campaign');
+var health= require('./routes/health');
+var environment= require('./routes/environment');
+var science= require('./routes/sciece');
 
 // Example route
 // var user = require('./routes/user');
@@ -63,6 +66,9 @@ app.get('/myprojects', myprojects.view);
 app.get('/timeData', timeData.view);
 app.get('/social', social.view);
 app.get('/campaign', campaign.view);
+app.get('/health', health.view);
+app.get('/environment', environment.view);
+app.get('/science', science.view);
 // Example route
 // app.get('/users', user.list);
 
