@@ -1,3 +1,5 @@
+var data = require("../data.json")
+
 var array1 = [];
 var pName;
 var topic;
@@ -32,4 +34,16 @@ function getHypo() {
 
 function getUrl() {
     return url;
+}
+
+function func2(email, pwd) {
+    if (email == '' || pwd == '') {
+        alert("Please fill all fields...!!!");
+        window.location = "/signin";
+    } else if (data.user[0].username == email && data.user[0].password == pwd) {
+        window.location = "home.html";
+    } else {
+        alert("invalid username or password");
+        window.location = "/signin";
+    }
 }

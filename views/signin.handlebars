@@ -17,11 +17,17 @@
   <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    
+    <script type='text/javascript' src="/js/project.js"></script>
 
   <script>
   function test1() {
-    $.getJSON("../data.json", callbackFuncWithData);
-    function callbackFuncWithData(data)
+      //$.getJSON("../data.json", callbackFuncWithData);
+
+      var email = $("#email").val();
+      var pwd = $("#pwd").val();
+      func2(email, pwd);
+    /*function callbackFuncWithData(data)
     {
       var email = $("#email").val();
       var pwd = $("#pwd").val();
@@ -34,14 +40,14 @@
         alert("invalid username or password");
         window.location="signin.html";
       }
-    }
+    }*/
   }
   </script>
 
 </head>
 <body>
   <div data-role="page" data-control-title="login" id="page4">
-    <div data-theme="b" data-role="header">
+    <div data-theme="b" data-role="header" data-tap-toggle="false">
       <h1 onclick="window.location.href='/index'" class="ui-title">
         CITIZEN SCIENTIST
       </h1>
@@ -66,10 +72,12 @@
         <div data-role="navbar" data-iconpos="top">
           <ul>
             <li>
-
-              <button onclick="test1()" id="login" data-transition="fade" data-theme="" data-icon="">
+              <a onclick="window.location.href='/home'" data-transition="fade" data-theme="" data-icon="">
+                  SIGN IN
+              </a>
+              <!--button onclick="test1()" id="login" data-transition="fade" data-theme="" data-icon="">
                 SIGN IN
-              </button>
+              </button-->
             </li>
           </ul>
         </div>

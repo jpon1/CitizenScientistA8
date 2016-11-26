@@ -88,20 +88,24 @@
                 </b>
             </p>
             <p>
-                Please make a <a href="https://docs.google.com/forms/" target="_blank">Google Form</a>, go to "SEND" then "<>" and copy and paste the "Embed HTML" code.
+                Please input up to five questions below. Users will be able to answer them with yes/no.
             </p>
         </div>
         <div class="ui-field-contain" data-controltype="textinput">
-             <label for="textinput5">
+             <label for="textinput5" id="qNum">
                  <b>
-                     Google Form Embedded HTML Code:
+                     Question 1:
                  </b>
                  <br>
-                 <br/>
+                 <br />
              </label>
              <input name="" id="textinput5" placeholder="" value="" type="text">
+             <a id="qCell"></a>
          </div>
+        <input type="button" id="addQ" value="Add Question" />
+        <input type="button" id="removeQ" value="Remove Question" />
 
+        <br/>
         <div id="projName" style="text-align:center; font-weight: bold; font-size:24px">
         </div>
         <div id="topicName" style="text-align:center; font-weight: bold; font-size:24px">
@@ -156,8 +160,6 @@ $(document).ready(function () {
       var d = $('#textinput4').val();
       var e = $('#textinput5').val();
 
-      //var create = require('./routes/create');
-
       if (a !='' && b !='' && c !='' && d !='' && e !='') {
         func1(a,b,c,d,e);
         localStorage.setItem("projectName",a);
@@ -182,6 +184,46 @@ $(document).ready(function () {
     });
 });
 
+</script>
+
+<script>
+    var quesNum = 1;
+
+    document.getElementById("addQ").onclick = function () {
+        if (quesNum < 5) {
+            quesNum++;
+            var qCell = document.getElementById("qCell");
+            var qNum = document.getElementById("qNum");
+            var header = document.createElement("header");
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "ques" + quesNum;
+            header.type = "header";
+            header.textContent = "Question " + quesNum + ":";
+            header.id = "qId" + quesNum;
+            var br = document.createElement("br");
+            br.id = "brId" + quesNum;
+            //var br1 = document.createElement("br");
+            //var br2 = document.createElement("br");
+            qNum.appendChild(header);
+            //qNum.appendChild(br1);
+            qCell.appendChild(input);
+            qCell.appendChild(br);
+            //qCell.appendChild(br2);
+        }
+        else
+            alert("Maximum Five Questions Can Be Made.");
+    }
+    document.getElementById("removeQ").onclick = function () {
+        if(quesNum == 1)
+            alert("Minimum One Question Required.")
+        else {
+            document.getElementById("ques" + quesNum).remove();
+            document.getElementById("qId" + quesNum).remove();
+            document.getElementById("brId" + quesNum).remove();
+            quesNum--;
+        }
+    }
 </script>
 
 </body>

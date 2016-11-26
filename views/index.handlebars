@@ -16,7 +16,8 @@
   <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
   <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+  <!--Bootstrap stylesheet for carousel-->
+  <link href="css/bootstrap.css" rel="stylesheet">
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
@@ -24,7 +25,7 @@
 <body>
 
 <div data-role="page" data-control-title="index" id="page3">
-    <div data-theme="b" data-role="header" data-position="fixed">
+    <div data-theme="b" data-role="header" data-position="fixed" data-tap-toggle="false">
         <header onclick="window.location.href='/index'" class="ui-title">
             CITIZEN SCIENTIST
         </header>
@@ -58,25 +59,25 @@
                 <div class="carousel-inner" role="listbox">
 
                     <div class="item active">
-                        <img src="/images/slide1.png" alt="Chania" width="100%" height="100%">
+                        <img src="/images/slide1.png" alt="Create" width="100%" height="100%">
                         <div class="carousel-caption">
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="/images/slide2.png" alt="Chania" width="100%" height="100%">
+                        <img src="/images/slide2.png" alt="Contribute" width="100%" height="100%">
                         <div class="carousel-caption">
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="/images/slide3.png" alt="Flower" width="100%" height="100%">
+                        <img src="/images/slide3.png" alt="Analyze" width="100%" height="100%">
                         <div class="carousel-caption">
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="/images/slide4.png" alt="Flower" width="100%" height="100%">
+                        <img src="/images/slide4.png" alt="My Projects" width="100%" height="100%">
                         <div class="carousel-caption">
                         </div>
                     </div>
@@ -138,80 +139,10 @@
     </div>
 </div>
 
-
-<script type="text/javascript">
-
-var  count1 = 0;
-var  count2 = 0;
-var  count3 = 0;
-var  count4 = 0;
-
-$('#createP').hide();
-$('#contributeP').hide();
-$('#analyzeP').hide();
-$('#monitorP').hide();
-
-
-function showCreate() {
-
-    count1 = count1 + 1;
-    if ((count1 % 2) == 0) {
-      return $('#createP').hide();
-    }
-
-    $('#createP').show();
-    $('#contributeP').hide();
-    $('#analyzeP').hide();
-    $('#monitorP').hide();
-};
-
-function showContribute() {
-
-    count2 = count2 + 1;
-    if ((count2 % 2) == 0) {
-      count1 = 0;
-      return $('#contributeP').hide();
-    }
-    $('#createP').hide();
-    $('#contributeP').show();
-    $('#analyzeP').hide();
-    $('#monitorP').hide();
-    //count1 = 0;
-};
-function showAnalyze() {
-
-    count3 = count3 + 1;
-    if ((count3 % 2) == 0) {
-      count2 = 0;
-      return $('#analyzeP').hide();
-    }
-    $('#createP').hide();
-    $('#contributeP').hide();
-    $('#analyzeP').show();
-    $('#monitorP').hide();
-    //count2 = 0;
-};
-function showMonitor() {
-
-    count4 = count4 + 1;
-     
-    if ((count4 % 2) == 0) {
-      return $('#monitorP').hide();
-    }
-    $('#createP').hide();
-    $('#contributeP').hide();
-    $('#analyzeP').hide();
-    $('#monitorP').show();
-    //count4 = 0;
-};
-
-</script>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
-
 
 </body>
 </html>
