@@ -19,11 +19,11 @@ var contribute2 = require('./routes/contribute2');
 var analyze = require('./routes/analyze');
 var myprojects = require('./routes/myprojects');
 var timeData = require('./routes/timeData');
-var social= require('./routes/social');
-var campaign= require('./routes/campaign');
-var health= require('./routes/health');
-var environment= require('./routes/environment');
-var science= require('./routes/sciece');
+var social = require('./routes/social');
+var campaign = require('./routes/campaign');
+var health = require('./routes/health');
+var environment = require('./routes/environment');
+var science = require('./routes/science');
 
 // Example route
 // var user = require('./routes/user');
