@@ -19,6 +19,9 @@ var contribute2 = require('./routes/contribute2');
 var analyze = require('./routes/analyze');
 var myprojects = require('./routes/myprojects');
 var timeData = require('./routes/timeData');
+var social= require('./routes/social');
+var campaign= require('./routes/campaign');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -58,6 +61,8 @@ app.get('/contribute2', contribute2.view);
 app.get('/analyze', analyze.view);
 app.get('/myprojects', myprojects.view);
 app.get('/timeData', timeData.view);
+app.get('/social', social.view);
+app.get('/campaign', campaign.view);
 // Example route
 // app.get('/users', user.list);
 
