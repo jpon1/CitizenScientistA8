@@ -24,7 +24,6 @@ var campaign = require('./routes/campaign');
 var health = require('./routes/health');
 var environment = require('./routes/environment');
 var science = require('./routes/science');
-var home2 = require('./routes/home2');
 
 // Example route
 // var user = require('./routes/user');
@@ -70,7 +69,8 @@ app.get('/campaign', campaign.view);
 app.get('/health', health.view);
 app.get('/environment', environment.view);
 app.get('/science', science.view);
-app.get('/home2', home2.view);
+app.get('/slides', home.viewSlides);
+
 // Example route
 // app.get('/users', user.list);
 

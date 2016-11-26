@@ -19,7 +19,7 @@
 
 <body>
 <div data-role="page" data-control-title="answer" id="page7">
-    <div data-theme="b" data-role="header">
+    <div data-theme="b" data-role="header" data-position="fixed" data-tap-toggle="false">
         <h1 onclick="window.location.href='home.html'" class="ui-title">
             CITIZEN SCIENTIST
         </h1>
@@ -80,7 +80,28 @@
                 </ul>
             </div>
         </div>
+    <div class="ui-body-b ui-body" style="overflow:hidden;" data-role="footer" data-id="navigation" data-position="fixed" data-tap-toggle="false">
+        <div data-role="navbar">
+            <ul>
+                <li><a onclick="window.location.href='/create'" data-icon="plus">Create</a></li>
+                <li><a href="/contribute" data-icon="edit">Contribute</a></li>
+                <li><a href="/analyze" data-icon="check">Analyze</a></li>
+                <li><a href="/myprojects" data-icon="gear">My Projects</a></li>
+                <li><a onclick="window.location.href='/index'" data-icon="power">Logout</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
 </div>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88027543-1', 'auto');
+  ga('send', 'pageview');
+
+    </script>
 </body>
 
 </html>
